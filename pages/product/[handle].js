@@ -16,25 +16,27 @@ const Handle = ({ data, addToCart }) => {
       </Head>
       <>
         <div className="flex px-[2vw] justify-start items-center w-[100vw] h-[14vh]">
-          <Link href="/">
-            <button className="font-semibold flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
-                />{" "}
-              </svg>
-              Go Back
-            </button>
-          </Link>
+          <button
+            onClick={() => {
+              history.back();
+            }}
+            className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >
+            <svg
+              aria-hidden="true"
+              className="mr-2 w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+            Go Back
+          </button>
         </div>
         <section className="text-gray-600 body-font overflow-hidden">
           <div className="container px-5 py-14 mx-auto">

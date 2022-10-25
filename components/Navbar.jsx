@@ -63,6 +63,11 @@ function Navbar({ cart, addToCart, removeFromCart, subTotal }) {
                   <p className="text-5xl font-black leading-10 text-gray-800 pt-3">
                     Your Cart
                   </p>
+                  {Object.keys(cart).length === 0 && (
+                    <p className="font-semibold text-[4vw] lg:text-[2vw]">
+                      Your Cart Is Empty!
+                    </p>
+                  )}
                   {Object.keys(cart).map((key) => {
                     return (
                       <div
