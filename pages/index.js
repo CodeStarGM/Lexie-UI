@@ -6,14 +6,14 @@ import Navbar from "../components/Navbar";
 
 export default function Home({ products }) {
   const [previous, setPrevious] = useState(0);
-  const [next, setNext] = useState(2);
+  const [next, setNext] = useState(25);
 
   const handleNext = () => {
-    if (next < 2) {
-      setNext(2);
+    if (next < 25) {
+      setNext(25);
     } else {
-      setPrevious(previous + 2);
-      setNext(next + 2);
+      setPrevious(previous + 25);
+      setNext(next + 25);
     }
   };
 
@@ -21,8 +21,8 @@ export default function Home({ products }) {
     if (previous === 0) {
       setPrevious(0);
     } else {
-      setPrevious(previous - 2);
-      setNext(next - 2);
+      setPrevious(previous - 25);
+      setNext(next - 25);
     }
   };
 
